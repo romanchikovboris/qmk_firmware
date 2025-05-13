@@ -146,7 +146,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,            RU_EF,             RU_YERU,           RU_VE,             RU_A,              RU_PE,             _______,                            _______,           RU_ER,             RU_O,              RU_EL,             RU_DE,             RU_ZHE,               RU_E,
         _______,            RU_YA,             RU_CHE,            RU_ES,             RU_EM,             RU_I,                                                                     RU_TE,             RU_SOFT,           RU_BE,             RU_YU,             RU_HARD,              RU_YO,
         _______,            _______,           _______,           KC_SLSH,           _______,                              _______,                            _______,                              _______,           _______,           LSFT(KC_SLSH),     _______,              _______,
-                                                                                     _______,           _______,           KC_SLSH,                            _______,           _______,           _______
+                                                                                     _______,           _______,           KC_LSFT,                            _______,           _______,           _______
     ),
 
     [GAME] = LAYOUT_moonlander(
@@ -161,8 +161,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MACR1] = LAYOUT_moonlander(
         RESET,               _______,          _______,           _______,           _______,           _______,           _______,                            _______,           _______,           _______,           _______,           _______,           _______,              _______,
         _______,             _______,          _______,           LCMD(KC_UP),       RENAME,            _______,           _______,                            _______,           _______,           _______,           _______,           _______,           _______,              _______,
-        _______,             _______,          LCMD(KC_LEFT),     LCMD(KC_DOWN),     LCMD(KC_RGHT),     _______,           LALT(LCTL(KC_N)),                   _______,           _______,           _______,           _______,           _______,           _______,              LNG,
-        _______,             _______,          _______,           _______,           _______,           LCMD(KC_X),                                                               _______,           _______,           _______,           _______,           _______,              KC_ENTER,
+        _______,             _______,          LCMD(KC_LEFT),     LCMD(KC_DOWN),     LCMD(KC_RGHT),     _______,           LALT(LCTL(KC_N)),                   _______,           _______,           _______,           _______,           _______,           _______,              _______,
+        _______,             _______,          _______,           _______,           EQUM,              LCMD(KC_X),                                                               _______,           _______,           _______,           _______,           _______,              _______,
         _______,             _______,          _______,           LCMD(KC_A),        LCMD(KC_D),                           SAVE,                               _______,                              _______,           _______,           _______,           _______,              _______,
                                                                                      LCMD(KC_C),        LCMD(KC_V),        LCMD(KC_Z),                         _______,           _______,           _______
     ),
@@ -359,7 +359,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           break; 
           case EQUM:
             if (record->event.pressed) {
-              SEND_STRING(" => ");
+              SEND_STRING("=>");
             } else {//  up
             }
           break; 
