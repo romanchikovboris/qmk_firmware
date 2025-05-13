@@ -1,5 +1,5 @@
 echo "Start compile"
 
-qmk compile  -kb moonlander -km romanchikov_thumbpad
+qmk compile  -kb zsa/moonlander -km romanchikov_thumbpad
 
 $SHELL
